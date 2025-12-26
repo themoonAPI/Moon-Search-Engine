@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Search Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Moon Logo" class="logo">
+        <h1>Moon Search Engine</h1>
+        <p>Anti-Gore, Anti-Porn – Safe Searches Only</p>
+    </header>
+
+    <main>
+        <input type="text" id="search" placeholder="Enter your search..." onkeyup="if(event.key==='Enter') search(document.querySelector('.tab-content.active').id);">
+
+        <div class="tabs">
+            <button onclick="switchTab('youtube')" class="tab-button active">YouTube</button>
+            <button onclick="switchTab('google')" class="tab-button">Google (MOON’s VERSION)</button>
+            <button onclick="switchTab('bing')" class="tab-button">Bing (MOON’s VERSION)</button>
+            <button onclick="switchTab('firefox')" class="tab-button">Firefox (MOON’s VERSION)</button>
+            <button onclick="switchTab('kbh')" class="tab-button">KBH Games</button>
+        </div>
+
+        <div id="youtube" class="tab-content active">
+            <button onclick="search('youtube')" class="search-btn">Search YouTube</button>
+        </div>
+        <div id="google" class="tab-content">
+            <button onclick="search('google')" class="search-btn">Search Google</button>
+        </div>
+        <div id="bing" class="tab-content">
+            <button onclick="search('bing')" class="search-btn">Search Bing</button>
+        </div>
+        <div id="firefox" class="tab-content">
+            <button onclick="search('firefox')" class="search-btn">Search Firefox</button>
+        </div>
+        <div id="kbh" class="tab-content">
+            <button onclick="search('kbh')" class="search-btn">Search KBH Games</button>
+        </div>
+    </main>
+</body>
+</html>
